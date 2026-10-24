@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OZAIN Business School · Excel e Power BI, do básico ao avançado</title>
+<meta name="description" content="Cursos de Excel e Power BI do básico ao avançado: 8 semanas, 48 horas, 80.000 Kz, aulas ao vivo em turmas de até 7 alunos e certificado. OZAIN Business School.">
+<meta name="theme-color" content="#020617">
+<meta property="og:title" content="OZAIN Business School · Excel e Power BI">
+<meta property="og:description" content="Do básico ao avançado, ao vivo, com certificado. Conhecimento que Transforma.">
+<meta property="og:image" content="img/cartaz_excel.jpg">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#020617;--bg2:#050d24;--bg3:#0a1633;--vidro:#ffffff0a;--vidro2:#ffffff12;--borda:#ffffff17;
+  --texto:#e8eefb;--suave:#a3b1cc;--fraco:#6c7a96;
+  --ouro:#d9b25f;--ouro2:#f6e2a8;--ouro3:#a97c2b;--verde:#3b82f6;--verde2:#1d4ed8;--esmeralda:#1e3a8a;--azul:#60a5fa;--azul2:#38bdf8;
+  --excel:#21a366;--bi:#f2c811;
+  --grad-ouro:linear-gradient(135deg,#fbecc0 0%,#e2bd6c 35%,#c49235 70%,#8f6a22 100%);
+  --raio:24px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--texto);font:16px/1.7 Inter,system-ui,'Segoe UI',Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;font-optical-sizing:auto;font-feature-settings:"cv11","ss01","ss03";font-kerning:normal;overflow-x:hidden}
+h1,h2,h3,h4{font-family:Sora,Inter,system-ui,sans-serif;margin:0;line-height:1.08;letter-spacing:-.03em;color:#fff;text-wrap:balance;font-kerning:normal}p{text-wrap:pretty}
+p{margin:0}a{color:inherit;text-decoration:none}img{display:block;max-width:100%;height:auto}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+.ouro{background:var(--grad-ouro);-webkit-background-clip:text;background-clip:text;color:transparent}
+.etq{display:inline-flex;align-items:center;gap:10px;font:600 12.5px Sora;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro)}
+.etq:before{content:"";width:22px;height:1.5px;background:var(--grad-ouro)}
+/* fundo vivo */
+.aurora{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.aurora i{position:absolute;border-radius:50%;filter:blur(110px);opacity:.38;animation:vagueia 22s ease-in-out infinite alternate}
+.aurora i:nth-child(1){width:640px;height:640px;left:-160px;top:-180px;background:#1d4ed8}
+.aurora i:nth-child(2){width:520px;height:520px;right:-140px;top:10%;background:#0ea5e9;opacity:.35;animation-duration:28s}
+.aurora i:nth-child(3){width:560px;height:560px;left:30%;bottom:-260px;background:#6d4c12;opacity:.4;animation-duration:32s}
+@keyframes vagueia{to{transform:translate(80px,60px) scale(1.12)}}
+.grao{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:1;background-image:radial-gradient(#93c5fd1c 1px,transparent 1.2px),linear-gradient(#ffffff05 1px,transparent 1px),linear-gradient(90deg,#ffffff05 1px,transparent 1px);background-size:24px 24px,96px 96px,96px 96px;-webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000 20%,transparent 70%);mask-image:radial-gradient(ellipse at 50% 0%,#000 20%,transparent 70%)}
+/* barra de progresso */
+.progresso{position:fixed;top:0;left:0;height:2px;width:0;background:var(--grad-ouro);z-index:80;box-shadow:0 0 12px #d9b25f}
+/* botões */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:16px 26px;font:700 15px Sora;cursor:pointer;white-space:nowrap;transition:transform .25s,box-shadow .25s,background .25s;overflow:hidden;isolation:isolate}
+.btn svg{width:18px;height:18px;transition:transform .25s}.btn:hover svg{transform:translateX(4px)}
+.btn-ouro{background:var(--grad-ouro);color:#1b1404;box-shadow:0 12px 34px -10px #d9b25fb0,inset 0 1px 0 #fff8}
+.btn-ouro:after{content:"";position:absolute;z-index:-1;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(110deg,transparent,#ffffffa0,transparent);transform:skewX(-20deg);animation:brilho 3.6s ease-in-out infinite}
+@keyframes brilho{0%,60%{left:-60%}100%{left:130%}}
+.btn-ouro:hover{transform:translateY(-3px);box-shadow:0 18px 44px -10px #d9b25fd0}
+.btn-vidro{background:var(--vidro);border:1px solid var(--borda);color:#fff;backdrop-filter:blur(10px)}.btn-vidro:hover{background:var(--vidro2);border-color:#d9b25f66}
+/* topo */
+.topo{position:fixed;left:0;right:0;top:14px;z-index:60;transition:top .3s}
+.topo .barra{max-width:1220px;margin:0 auto;padding:0 24px}
+.topo nav.cx{display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px;padding:0 10px 0 14px;border-radius:20px;border:1px solid transparent;transition:background .3s,border-color .3s,box-shadow .3s}
+.topo.solido nav.cx{background:#081330cc;backdrop-filter:blur(16px) saturate(1.4);border-color:var(--borda);box-shadow:0 20px 50px -20px #000}
+.marca{display:flex;align-items:center;gap:12px}
+.marca .selo{width:44px;height:44px;border-radius:13px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 1px #d9b25f80,0 8px 20px -6px #000}.marca .selo img{width:36px}
+.marca b{display:block;font:800 17px Sora;letter-spacing:.16em;line-height:1}.marca small{display:block;margin-top:5px;font:600 8.5px Inter;letter-spacing:.34em;color:var(--suave)}
+.links{display:flex;align-items:center;gap:4px}
+.links a{padding:9px 14px;border-radius:12px;font:500 14.5px Inter;color:#cdd8f0;transition:.2s}.links a:hover{color:#fff;background:var(--vidro2)}
+.links .btn{margin-left:8px;padding:11px 20px;font-size:14px;color:#1b1404}
+.hamb{display:none;width:46px;height:46px;border-radius:14px;border:1px solid var(--borda);background:var(--vidro);cursor:pointer;align-items:center;justify-content:center}
+.hamb span,.hamb span:before,.hamb span:after{content:"";display:block;width:20px;height:2px;border-radius:2px;background:#fff;position:relative;transition:.3s}
+.hamb span:before{position:absolute;top:-6px}.hamb span:after{position:absolute;top:6px}
+.hamb.x span{background:transparent}.hamb.x span:before{top:0;transform:rotate(45deg)}.hamb.x span:after{top:0;transform:rotate(-45deg)}
+/* hero */
+.hero{position:relative;padding:170px 0 90px;min-height:clamp(640px,100vh,940px);display:flex;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;gap:50px;align-items:center;width:100%}
+.selo-vivo{display:inline-flex;align-items:center;gap:10px;padding:7px 8px 7px 14px;border-radius:999px;border:1px solid var(--borda);background:var(--vidro);backdrop-filter:blur(8px);font:500 13.5px Inter;color:#d6e0f5}
+.selo-vivo .pt{width:8px;height:8px;border-radius:50%;background:var(--verde);box-shadow:0 0 0 0 #3b82f699;animation:pulso 2s infinite}
+@keyframes pulso{70%{box-shadow:0 0 0 9px #3b82f600}}
+.selo-vivo b{background:var(--grad-ouro);color:#1b1404;border-radius:999px;padding:4px 11px;font:700 11.5px Sora;letter-spacing:.05em}
+.hero h1{font-size:clamp(42px,6.2vw,80px);font-weight:800;margin:26px 0 24px;letter-spacing:-.04em}
+.hero h1 .ln{display:block}
+.hero .lead{font-size:18.5px;color:var(--suave);max-width:560px}
+.hero .lead b{color:#fff;font-weight:600}
+.acoes{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.contadores{display:grid;grid-template-columns:repeat(4,auto);gap:30px;margin-top:48px;padding-top:30px;border-top:1px solid var(--borda);justify-content:start}
+.contadores b{display:block;font:800 30px Sora;letter-spacing:-.03em;color:#fff}.contadores b span{font:inherit;color:inherit}.contadores>div>span{font-size:13.5px;color:var(--suave)}
+/* palco 3D */
+.palco{position:relative;height:560px;perspective:1400px}
+.tela{position:absolute;transition:transform .25s ease-out}
+.tela img{width:100%;height:100%;object-fit:cover}
+.tela.t1{width:58%;height:78%;left:2%;top:4%;transform:rotateY(14deg) rotateX(4deg) rotate(-3deg)}
+.tela.t2{width:56%;height:74%;right:0;top:20%;transform:rotateY(-14deg) rotateX(4deg) rotate(3deg)}
+.tela:after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,#ffffff26,transparent 40%)}
+.anel{position:absolute;left:50%;top:50%;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;border:1px dashed #d9b25f40;animation:gira 60s linear infinite}
+.anel:before{content:"";position:absolute;inset:60px;border-radius:50%;border:1px solid #60a5fa40}
+@keyframes gira{to{transform:rotate(360deg)}}
+.flut{position:absolute;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:18px;background:#0a1633d9;border:1px solid #ffffff1f;backdrop-filter:blur(14px);box-shadow:0 20px 40px -15px #000;animation:boia 7s ease-in-out infinite;z-index:3}
+.flut .ic{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font:800 15px Sora;flex:none}
+.flut b{display:block;font:700 14px Sora}.flut small{color:var(--suave);font-size:12px}
+.f1{left:-4%;bottom:12%}.f1 .ic{background:linear-gradient(135deg,#21a366,#0b5d36);color:#fff}
+.f2{right:-2%;top:2%;animation-delay:-2.5s}.f2 .ic{background:linear-gradient(135deg,#f6d34a,#d39d00);color:#1b1404}
+.f3{right:6%;bottom:0;animation-delay:-4.5s}.f3 .ic{background:var(--grad-ouro);color:#1b1404}
+@keyframes boia{50%{transform:translateY(-10px)}}
+/* faixa */
+.faixa{position:relative;border-block:1px solid #60a5fa26;background:#07112acc;padding:22px 0;overflow:hidden}
+.faixa .trilho{display:flex;gap:56px;width:max-content;animation:corre 38s linear infinite}
+.faixa span{display:flex;align-items:center;gap:14px;font:700 17px Sora;color:#ffffff80;white-space:nowrap}
+.faixa span:before{content:"";width:8px;height:8px;transform:rotate(45deg);background:var(--grad-ouro)}
+@keyframes corre{to{transform:translateX(-50%)}}
+/* secções */
+.sec{padding:120px 0;position:relative}
+.cab{max-width:760px;margin:0 auto 64px;text-align:center}
+.cab h2{font-size:clamp(32px,4.2vw,54px);font-weight:800;margin:16px 0 18px}.cab p{font-size:18px;color:var(--suave)}
+.vid{background:linear-gradient(180deg,#60a5fa12,#ffffff05);border:1px solid #93c5fd1f;border-radius:var(--raio);backdrop-filter:blur(12px)}
+/* realce que segue o rato */
+.luz{position:relative;overflow:hidden}
+.luz:before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),#d9b25f1f,transparent 45%);opacity:0;transition:opacity .3s}
+.luz:hover:before{opacity:1}
+/* seletor de cursos */
+.seletor{display:flex;justify-content:center;margin-bottom:40px}
+.seletor .trilha{position:relative;display:flex;padding:6px;border-radius:999px;background:var(--vidro);border:1px solid var(--borda)}
+.seletor button{position:relative;z-index:1;border:0;background:none;color:var(--suave);font:700 15px Sora;padding:13px 30px;border-radius:999px;cursor:pointer;display:flex;align-items:center;gap:10px;transition:color .3s}
+.seletor button i{font-style:normal;width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;font:800 11px Sora;color:#fff;background:var(--excel)}
+.seletor button+button i{background:var(--bi);color:#1b1404}
+.seletor button.ativo{color:#1b1404}
+.seletor .pilula{position:absolute;top:6px;bottom:6px;left:6px;border-radius:999px;background:var(--grad-ouro);transition:transform .45s cubic-bezier(.6,.2,.2,1),width .45s;box-shadow:0 8px 24px -8px #d9b25f}
+.curso{display:none;grid-template-columns:1.05fr 1fr;gap:28px;align-items:stretch}
+.curso.ativo{display:grid;animation:surge .6s cubic-bezier(.2,.7,.2,1)}
+@keyframes surge{from{opacity:0;transform:translateY(18px)}}
+.c-visual{position:relative;padding:34px;display:flex;flex-direction:column;overflow:hidden;min-height:540px}
+.c-visual .foto{position:absolute;inset:0;z-index:-1}
+
+
+.c-visual .foto:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#020617cc 0%,#02061740 45%,#020617f2 100%)}
+.c-visual .nivel{align-self:flex-start;padding:7px 14px;border-radius:999px;font:700 12px Sora;letter-spacing:.12em;text-transform:uppercase;background:#050b1cb0;border:1px solid #ffffff2a}
+.c-visual h3{font-size:clamp(46px,6vw,74px);font-weight:800;margin-top:auto;letter-spacing:-.045em}
+.excel .c-visual h3 span{color:var(--excel)}.bi .c-visual h3 span{color:var(--bi)}
+.c-visual p{color:#d3dcf0;font-size:17px;max-width:460px;margin-top:12px}
+.dados{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
+.dados div{padding:14px 16px;border-radius:16px;background:#050b1cb8;border:1px solid #ffffff1c;backdrop-filter:blur(8px)}
+.dados small{display:block;font-size:12px;color:var(--suave)}.dados b{font:700 17px Sora}
+.c-mod{padding:30px;display:flex;flex-direction:column}
+.c-mod h4{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--ouro);margin-bottom:16px}
+.mod{border:1px solid var(--borda);border-radius:18px;margin-bottom:12px;background:#ffffff05;transition:border-color .3s,background .3s;overflow:hidden}
+.mod.aberto{border-color:#d9b25f66;background:#d9b25f0d}
+.mod button{width:100%;border:0;background:none;color:#fff;display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;text-align:left}
+.mod .n{flex:none;width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font:800 15px Sora;background:var(--vidro2);border:1px solid var(--borda);color:var(--ouro)}
+.mod.aberto .n{background:var(--grad-ouro);color:#1b1404;border:0}
+.mod .t{flex:1}.mod .t b{display:block;font:700 16px Sora}.mod .t small{color:var(--suave);font-size:13.5px}
+.mod .seta{width:30px;height:30px;border-radius:50%;border:1px solid var(--borda);display:flex;align-items:center;justify-content:center;transition:transform .35s}
+.mod.aberto .seta{transform:rotate(180deg)}
+.mod .seta svg{width:14px;height:14px}
+.mod .corpo{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.mod.aberto .corpo{grid-template-rows:1fr}
+.mod .corpo>div{overflow:hidden}
+.mod ul{list-style:none;margin:0;padding:0 18px 16px 72px;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
+.mod li{position:relative;padding-left:20px;font-size:14.5px;color:#d3dcf0}
+.mod li:before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:3px;background:var(--grad-ouro);transform:rotate(45deg)}
+.c-mod .acoes{margin-top:auto;padding-top:14px}
+/* preço */
+.precos{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center}
+.cartao-preco{position:relative;border-radius:30px;padding:2px;background:conic-gradient(from var(--ang,0deg),#d9b25f,#3b82f6,#f6e2a8,#38bdf8,#1d4ed8,#d9b25f);animation:roda 6s linear infinite}
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes roda{to{--ang:360deg}}
+.cartao-preco .in{border-radius:28px;background:linear-gradient(160deg,#0f1f45,#060d22);padding:40px}
+.cartao-preco .tag{display:inline-block;padding:6px 14px;border-radius:999px;background:#3b82f61f;color:#93c5fd;font:700 12px Sora;letter-spacing:.1em;border:1px solid #3b82f655}
+.valor{display:flex;align-items:flex-end;gap:12px;margin:18px 0 6px}
+.valor b{font:800 clamp(52px,7vw,84px) Sora;letter-spacing:-.05em;line-height:.9}
+.valor span{font:700 22px Sora;color:var(--ouro);padding-bottom:8px}
+.cartao-preco .por{color:var(--suave);margin-bottom:26px}
+.inclui{list-style:none;margin:0 0 30px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.inclui li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#d3dcf0}
+.inclui li:before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:var(--grad-ouro);color:#1b1404;font:800 12px Inter;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.semana{padding:34px}
+.semana h3{font-size:26px;margin:14px 0 8px}.semana>p{color:var(--suave);margin-bottom:24px}
+.dias{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.dia{border-radius:16px;padding:14px 4px;text-align:center;border:1px solid var(--borda);background:#ffffff04}
+.dia b{display:block;font:700 13px Sora;color:var(--fraco)}.dia span{display:block;font-size:12px;color:var(--fraco);margin-top:4px}
+.dia.aula{background:linear-gradient(180deg,#d9b25f26,#d9b25f08);border-color:#d9b25f66}
+.dia.aula b{color:var(--ouro2)}.dia.aula span{color:#fff;font-weight:600}
+.dia.aula:after{content:"";display:block;width:6px;height:6px;border-radius:50%;background:var(--ouro);margin:8px auto 0;box-shadow:0 0 10px var(--ouro)}
+.barras{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.barras div{padding:16px;border-radius:16px;background:#ffffff06;border:1px solid var(--borda)}
+.barras b{display:block;font:800 26px Sora}.barras small{color:var(--suave);font-size:13px}
+/* vantagens */
+.grelha{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vant{padding:30px}
+.vant .ic{width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#d9b25f30,#d9b25f08);border:1px solid #d9b25f44;color:var(--ouro2)}
+.vant .ic svg{width:26px;height:26px}
+.vant h3{font-size:20px;margin:22px 0 10px}.vant p{color:var(--suave);font-size:15.5px}
+.vant.destaque{grid-column:span 2;display:grid;grid-template-columns:1fr 1.1fr;gap:26px;align-items:center}
+.vant.destaque img{border-radius:18px;border:1px solid #ffffff22;box-shadow:0 30px 60px -25px #000}
+/* passos */
+.linha-tempo{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.linha-tempo:before{content:"";position:absolute;left:4%;right:4%;top:34px;height:2px;background:linear-gradient(90deg,transparent,#d9b25f,#38bdf8,#3b82f6,#d9b25f,transparent);opacity:.6}
+.passo{text-align:center}
+.passo .bola{position:relative;width:68px;height:68px;margin:0 auto 22px;border-radius:50%;background:var(--bg);border:1px solid #d9b25f80;display:flex;align-items:center;justify-content:center;font:800 20px Sora;box-shadow:0 0 0 8px var(--bg),0 0 30px #d9b25f40}
+.passo h3{font-size:19px;margin-bottom:8px}.passo p{color:var(--suave);font-size:15px}
+/* parceiros */
+.parceiros{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;padding:56px}
+.parceiros h2{font-size:clamp(30px,3.6vw,46px);font-weight:800;margin:16px 0 16px}.parceiros>div>p{color:var(--suave);font-size:17px;margin-bottom:26px}
+.lista-p{list-style:none;padding:0;margin:0 0 30px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lista-p li{display:flex;gap:10px;align-items:center;padding:12px 14px;border-radius:14px;background:#ffffff06;border:1px solid var(--borda);font-size:14.5px}
+.lista-p li i{font-style:normal;color:var(--ouro)}
+.dispositivos{position:relative;padding-bottom:30px}
+.dispositivos .pc{border-radius:18px;border:1px solid #ffffff26;box-shadow:0 40px 80px -30px #000}
+.dispositivos .tel{position:absolute;right:-14px;bottom:0;width:30%;border-radius:26px;padding:7px;background:#0b1430;border:1px solid #ffffff2a;box-shadow:0 30px 60px -20px #000}
+.dispositivos .tel img{border-radius:20px}
+.planos{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.planos span{padding:8px 16px;border-radius:999px;border:1px solid #d9b25f55;color:var(--ouro2);font:700 13.5px Sora;background:#d9b25f0d}
+/* cartazes */
+.cartazes{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:920px;margin:0 auto}
+.cartazes a{border-radius:24px;overflow:hidden;border:1px solid #ffffff22;box-shadow:0 40px 80px -30px #000;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.cartazes a:hover{transform:translateY(-10px) rotate(-1deg)}
+/* perguntas */
+.faq{max-width:880px;margin:0 auto;display:grid;gap:12px}
+.faq details{padding:0 26px;border-radius:20px}
+.faq summary{list-style:none;cursor:pointer;padding:22px 46px 22px 0;font:600 17px Sora;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:0;top:50%;width:32px;height:32px;margin-top:-16px;border-radius:50%;border:1px solid #d9b25f66;color:var(--ouro);display:flex;align-items:center;justify-content:center;font:400 20px Inter;transition:transform .3s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq details p{padding-bottom:22px;color:var(--suave)}
+.faq details[open]{border-color:#d9b25f55}
+/* inscrição */
+.final{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;padding:60px;border-radius:36px;position:relative;overflow:hidden;isolation:isolate}
+.final:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 400px at 0% 0%,#d9b25f26,transparent 60%),radial-gradient(500px 400px at 100% 100%,#3b82f633,transparent 60%)}
+.final h2{font-size:clamp(32px,3.8vw,50px);font-weight:800;margin:16px 0 18px}.final>div>p{color:var(--suave);font-size:17px}
+.contactos{display:grid;gap:12px;margin-top:30px}
+.contactos a{display:flex;gap:14px;align-items:center;padding:16px;border-radius:18px;background:#ffffff06;border:1px solid var(--borda);transition:.25s}.contactos a:hover{border-color:#d9b25f77;transform:translateX(4px)}
+.contactos .ic{flex:none;width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:#25d36622;color:#25d366}.contactos .ic svg{width:24px;height:24px}
+.contactos a+a .ic{background:#d9b25f22;color:var(--ouro)}
+.contactos small{display:block;color:var(--suave);font-size:12.5px;line-height:1.3}.contactos b{font:700 16px Sora}
+form{padding:32px;border-radius:26px;background:#060d22e6;border:1px solid #ffffff1f}
+form h3{font-size:22px}form .sub{color:var(--suave);font-size:14.5px;margin:4px 0 22px}
+.opcoes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.opcoes label{cursor:pointer}.opcoes input{position:absolute;opacity:0}
+.opcoes span{display:flex;flex-direction:column;gap:6px;padding:14px;border-radius:16px;border:1.5px solid var(--borda);background:#ffffff05;font:700 14px Sora;transition:.25s;height:100%}
+.opcoes span small{font:500 12px Inter;color:var(--suave)}
+.opcoes input:checked+span{border-color:var(--ouro);background:#d9b25f14;box-shadow:0 0 0 4px #d9b25f1a}
+.opcoes input:focus-visible+span{outline:2px solid var(--ouro);outline-offset:2px}
+.campo{margin-bottom:14px}.campo label{display:block;font:500 13.5px Inter;color:#cfe0d6;margin-bottom:7px}
+.campo input,.campo select,.campo textarea{width:100%;padding:14px 16px;border-radius:14px;border:1.5px solid var(--borda);background:#ffffff08;color:#fff;font:15px Inter;transition:.25s}
+.campo select option{background:#0c1a3a}
+.campo input::placeholder,.campo textarea::placeholder{color:var(--fraco)}
+.campo input:focus,.campo select:focus,.campo textarea:focus{outline:none;border-color:var(--ouro);box-shadow:0 0 0 4px #d9b25f22;background:#ffffff0d}
+.par{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .btn{width:100%;margin-top:6px;padding:18px}
+.nota{text-align:center;font-size:13px;color:var(--fraco);margin-top:14px}
+/* rodapé */
+footer{margin-top:120px;border-top:1px solid #60a5fa26;padding:70px 0 36px;background:#030817}
+footer .wrap{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+footer p{color:var(--suave);font-size:15px;margin-top:18px;max-width:340px}
+footer h4{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ouro);margin-bottom:16px}
+footer .col a{display:block;color:var(--suave);padding:5px 0;font-size:15px;transition:color .2s}footer .col a:hover{color:#fff}
+.direitos{grid-column:1/-1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:26px;margin-top:16px;border-top:1px solid var(--borda);color:var(--fraco);font-size:14px}
+.wa{position:fixed;right:22px;bottom:22px;z-index:50;display:flex;align-items:center;gap:10px;padding:14px 20px 14px 15px;border-radius:999px;background:#25d366;color:#050b1c;font:700 14.5px Sora;box-shadow:0 14px 34px -8px #25d366aa;transition:transform .25s}
+.wa:hover{transform:translateY(-3px)}.wa svg{width:24px;height:24px;fill:#050b1c}
+/* detalhes azuis */
+.vant .ic{background:linear-gradient(135deg,#3b82f633,#3b82f60a);border-color:#60a5fa55;color:#93c5fd}
+.etq{color:#7cb7ff}.etq:before{background:linear-gradient(90deg,#38bdf8,#d9b25f)}
+.mod li:before{background:linear-gradient(135deg,#60a5fa,#38bdf8)}
+.lista-p li i{color:#60a5fa}
+.dados div,.barras div{border-color:#60a5fa2e}
+.dia.aula{background:linear-gradient(180deg,#3b82f633,#3b82f60a);border-color:#60a5fa88}.dia.aula b{color:#bfdbfe}.dia.aula:after{background:#60a5fa;box-shadow:0 0 10px #60a5fa}
+.passo .bola{border-color:#60a5fa99;box-shadow:0 0 0 8px var(--bg),0 0 30px #3b82f655}
+.faq summary:after{border-color:#60a5fa77;color:#93c5fd}
+.contactos a+a .ic{background:#3b82f622;color:#93c5fd}
+.planos span{border-color:#60a5fa66;color:#bfdbfe;background:#3b82f614}
+.selo-vivo{border-color:#60a5fa44}
+.progresso{background:linear-gradient(90deg,#38bdf8,#3b82f6,#d9b25f);box-shadow:0 0 12px #3b82f6}
+.mod.aberto{border-color:#60a5fa77;background:#3b82f610}
+.luz:before{background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),#60a5fa22,transparent 45%)}
+.faixa span:before{background:linear-gradient(135deg,#38bdf8,#3b82f6)}
+/* ===== janelas desenhadas (vetoriais: nítidas em qualquer ecrã) ===== */
+.jan{width:100%;border-radius:16px;overflow:hidden;font-family:Inter,Arial,sans-serif;font-size:clamp(9px,1.05vw,13px);line-height:1.3;box-shadow:0 40px 80px -30px #000,0 0 0 1px #ffffff1f;text-align:left}
+.jbar{display:flex;align-items:center;gap:.5em;padding:.75em 1em;color:#fff;font-weight:600;font-size:1em}
+.jbar i{width:.75em;height:.75em;border-radius:50%;background:#ffffff59}.jbar i:first-child{background:#ff5f57}.jbar i:nth-child(2){background:#febc2e}.jbar i:nth-child(3){background:#28c840}
+.jbar b{margin-left:.6em;font-weight:600;letter-spacing:.01em}
+.jx{background:#fff;color:#1e293b}.jx .jbar{background:#107c41}
+.jrib{display:flex;gap:1.2em;padding:.55em 1em;background:#f1f5f2;border-bottom:1px solid #e2e8f0;color:#475569;font-weight:500}.jrib .on{color:#107c41;font-weight:700;border-bottom:2px solid #107c41}
+.jfx{padding:.55em 1em;border-bottom:1px solid #e2e8f0;font-family:Consolas,'Cascadia Mono',monospace;color:#0f5132;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.jfx em{font-style:italic;color:#94a3b8;margin-right:.8em;font-family:Georgia,serif}
+.jcorpo{display:grid;grid-template-columns:1.55fr 1fr;gap:.8em;padding:.8em 1em 1em;align-items:end}
+.jtab{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+.jtab th{background:#f1f5f2;color:#64748b;font-weight:600;padding:.35em .4em;border:1px solid #e2e8f0;text-align:center}
+.jtab td{padding:.4em .5em;border:1px solid #e2e8f0;white-space:nowrap}.jtab td:first-child{background:#f1f5f2;color:#64748b;text-align:center;width:1.8em}
+.jtab .h{font-weight:700;background:#e8f5ee;color:#0f5132}.jtab .s{background:#fff8e6;font-weight:600}.jtab .sel{outline:2px solid #107c41;outline-offset:-2px;font-weight:800;background:#e8f5ee}
+.jgraf{width:100%;height:auto}
+.jb{background:#0b1324;color:#e2e8f0}.jb .jbar{background:#111c33;border-bottom:1px solid #ffffff12}
+.jkpi{display:grid;grid-template-columns:repeat(3,1fr);gap:.7em;padding:.9em 1em .4em}
+.jkpi div{background:#13203d;border:1px solid #ffffff14;border-radius:.8em;padding:.7em .8em}
+.jkpi small{display:block;color:#94a3b8;font-size:.85em}.jkpi b{display:block;font-family:Sora,Arial,sans-serif;font-size:1.55em;font-weight:800;color:#fff;letter-spacing:-.02em}.jkpi em{font-style:normal;color:#4ade80;font-size:.85em;font-weight:600}
+.jgr{display:grid;grid-template-columns:1.8fr 1fr;gap:.7em;padding:.4em 1em .5em}.jgr svg{width:100%;height:auto;background:#13203d;border-radius:.8em;border:1px solid #ffffff14}
+.jbar2{display:grid;gap:.45em;padding:.3em 1em 1em}.jbar2 span{display:block;height:.55em;border-radius:1em;background:linear-gradient(90deg,#3b82f6,#38bdf8)}.jbar2 span:nth-child(2){background:linear-gradient(90deg,#f2c811,#d9b25f)}
+/* palco do topo com as janelas */
+.tela{border:0;overflow:visible;box-shadow:none;background:none;border-radius:16px}
+.tela:after{display:none}
+.tela.t1{width:64%;height:auto;left:0;top:4%;transform:perspective(1600px) rotateY(10deg) rotate(-2deg)}
+.tela.t2{width:62%;height:auto;right:0;top:38%;transform:perspective(1600px) rotateY(-10deg) rotate(2deg)}
+/* cartão do curso com a janela por trás */
+.c-visual .foto{inset:0;display:flex;align-items:flex-start;justify-content:flex-end;padding:70px 26px 0 0}
+.c-visual .foto .jan{width:78%;transform:rotate(-2deg);opacity:.95}
+.c-visual .foto:after{background:linear-gradient(180deg,#020617a0 0%,#02061700 30%,#020617e6 66%,#020617 100%)}
+/* revelar ao deslizar */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.ok{opacity:1;transform:none}.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none;filter:none}html{scroll-behavior:auto}}
+/* os itens das grelhas podem encolher (evita texto cortado no telemóvel) */
+.hero .wrap>*,.curso>*,.precos>*,.parceiros>*,.final>*,.grelha>*,.vant>*{min-width:0}
+/* responsivo */
+@media(max-width:1060px){
+  .hero .wrap,.precos,.parceiros,.final{grid-template-columns:1fr}
+  .palco{height:460px;max-width:640px;width:100%;margin:0 auto}
+  .curso.ativo{grid-template-columns:1fr}.c-visual{min-height:440px}
+  .grelha{grid-template-columns:1fr 1fr}.vant.destaque{grid-column:span 2}
+  footer .wrap{grid-template-columns:1fr 1fr}
+  .parceiros{padding:40px}.final{padding:44px}
+}
+@media(max-width:880px){
+  .hamb{display:flex}
+  .links{position:fixed;top:92px;left:16px;right:16px;flex-direction:column;align-items:stretch;padding:12px;border-radius:22px;background:#081330f2;border:1px solid var(--borda);backdrop-filter:blur(16px);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.3s}
+  .links.aberto{transform:none;opacity:1;pointer-events:auto}
+  .links a{padding:14px}.links .btn{margin:8px 0 0}
+  .linha-tempo{grid-template-columns:1fr 1fr;row-gap:40px}.linha-tempo:before{display:none}
+  .contadores{grid-template-columns:repeat(2,auto);gap:22px 40px}
+}
+@media(max-width:620px){
+  .wrap{padding:0 18px}.sec{padding:84px 0}
+  .topo{top:8px}.topo .barra{padding:0 10px}
+  .hero{padding:130px 0 60px;min-height:auto}.hero .lead{font-size:17px}.acoes .btn{flex:1 1 100%}.btn{white-space:normal;text-align:center}.hero h1{font-size:40px}
+  .palco{height:330px}.anel{width:340px;height:340px;margin:-170px 0 0 -170px}
+  .flut{padding:9px 12px;gap:9px}.flut .ic{width:32px;height:32px;font-size:12px}.flut b{font-size:12.5px}.flut small{font-size:11px}.f3{display:none}
+  .seletor button{padding:12px 18px;font-size:14px}
+  .c-visual{padding:24px;min-height:420px}.dados{grid-template-columns:1fr 1fr 1fr}.dados div{padding:10px}.dados b{font-size:14px}
+  .c-mod{padding:20px}.mod ul{grid-template-columns:1fr;padding-left:18px}
+  .cartao-preco .in{padding:28px 22px}.inclui{grid-template-columns:1fr}
+  .semana{padding:24px 18px}.dia{padding:10px 0}.dia b{font-size:11.5px}.dia span{font-size:10.5px}
+  .grelha,.lista-p,.cartazes,.par,.opcoes{grid-template-columns:1fr}.vant.destaque{grid-column:auto;grid-template-columns:1fr}
+  .linha-tempo{grid-template-columns:1fr}
+  .parceiros{padding:28px 20px}.final{padding:28px 18px;border-radius:26px}form{padding:22px 18px}
+  footer .wrap{grid-template-columns:1fr}
+  .wa span{display:none}.wa{padding:15px}
+}
+</style>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div><div class="grao" aria-hidden="true"></div>
+<div class="progresso" id="progresso"></div>
+
+<!-- ================= TOPO ================= -->
+<header class="topo" id="topo"><div class="barra"><nav class="cx" aria-label="Menu principal">
+  <a class="marca" href="#inicio" aria-label="OZAIN Business School"><span class="selo"><img src="img/logo.png" alt=""></span><span><b>OZAIN</b><small>BUSINESS SCHOOL</small></span></a>
+  <div class="links" id="links">
+    <a href="#cursos">Cursos</a><a href="#investimento">Investimento</a><a href="#porque">Porquê nós</a><a href="#parceiros">Parceiros</a><a href="#faq">Perguntas</a>
+    <a href="https://lokenio100-commits.github.io/Controlle-SC2026/" target="_blank" rel="noopener">Entrar na aula</a>
+    <a class="btn btn-ouro" href="#inscricao">Inscrever-me</a>
+  </div>
+  <button class="hamb" id="hamb" aria-label="Abrir o menu" aria-expanded="false"><span></span></button>
+</nav></div></header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <div class="selo-vivo rv"><span class="pt"></span>Inscrições abertas <b>80.000 Kz</b></div>
+      <h1 class="rv d1"><span class="ln">Domine os dados.</span><span class="ln ouro">Lidere com eles.</span></h1>
+      <p class="lead rv d2">Cursos completos de <b>Excel</b> e <b>Power BI</b>, do básico ao avançado. Aulas ao vivo, turmas de até 7 alunos e certificado no fim.</p>
+      <div class="acoes rv d3">
+        <a class="btn btn-ouro" href="#inscricao">Garantir a minha vaga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-vidro" href="#cursos">Explorar os cursos</a>
+      </div>
+      <div class="contadores rv d3">
+        <div><b><span data-conta="48">0</span>h</b><span>por curso</span></div>
+        <div><b><span data-conta="8">0</span></b><span>semanas</span></div>
+        <div><b><span data-conta="3">0</span></b><span>módulos</span></div>
+        <div><b><span data-conta="7">0</span></b><span>alunos por turma</span></div>
+      </div>
+    </div>
+    <div class="palco rv d2" id="palco" aria-hidden="true">
+      <div class="anel"></div>
+      <div class="tela t1" data-prof="1"><div class="jan jx"><div class="jbar"><i></i><i></i><i></i><b>Vendas_2026.xlsx — Excel</b></div>
+<div class="jrib"><span class="on">Base</span><span>Inserir</span><span>Fórmulas</span><span>Dados</span><span>Rever</span></div>
+<div class="jfx"><em>fx</em>=SOMA.SE.S(Vendas[Valor];Vendas[Região];"Luanda")</div>
+<div class="jcorpo"><table class="jtab"><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+<tr><td>1</td><td class="h">Região</td><td class="h">Jan</td><td class="h">Fev</td><td class="h">Total</td></tr>
+<tr><td>2</td><td>Luanda</td><td>4 250</td><td>4 980</td><td class="s">9 230</td></tr>
+<tr><td>3</td><td>Benguela</td><td>2 110</td><td>2 640</td><td class="s">4 750</td></tr>
+<tr><td>4</td><td>Huambo</td><td>1 870</td><td>2 020</td><td class="s">3 890</td></tr>
+<tr><td>5</td><td>Lubango</td><td>1 340</td><td>1 610</td><td class="s">2 950</td></tr>
+<tr><td>6</td><td class="h">Total</td><td class="h">9 570</td><td class="h">11 250</td><td class="sel">20 820</td></tr></table>
+<svg class="jgraf" viewBox="0 0 160 110" aria-hidden="true"><g fill="#21a366"><rect x="10" y="62" width="14" height="38" rx="2"/><rect x="32" y="48" width="14" height="52" rx="2"/><rect x="54" y="55" width="14" height="45" rx="2"/><rect x="76" y="34" width="14" height="66" rx="2"/><rect x="98" y="40" width="14" height="60" rx="2"/></g><rect x="120" y="16" width="14" height="84" rx="2" fill="#d9b25f"/><path d="M4 100h152" stroke="#cbd5e1" stroke-width="1"/><text x="10" y="11" font-size="9" font-family="Inter,Arial" font-weight="700" fill="#0f5132">Vendas por mês</text></svg></div></div></div>
+      <div class="tela t2" data-prof="-1"><div class="jan jb"><div class="jbar"><i></i><i></i><i></i><b>Painel de Vendas — Power BI</b></div>
+<div class="jkpi"><div><small>Receita</small><b>20,8 M</b><em>▲ 18,2%</em></div><div><small>Clientes</small><b>4 320</b><em>▲ 8,3%</em></div><div><small>Meta</small><b>94%</b><em>▲ 6,1%</em></div></div>
+<div class="jgr"><svg viewBox="0 0 220 120" aria-hidden="true"><defs><linearGradient id="ga1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b82f6" stop-opacity=".45"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></linearGradient></defs><text x="6" y="12" font-size="9" font-family="Inter,Arial" font-weight="700" fill="#e2e8f0">Evolução da receita</text><g stroke="#ffffff14"><path d="M6 40h208M6 70h208M6 100h208"/></g><path d="M6 96 L40 84 L74 88 L108 66 L142 58 L176 40 L214 26 L214 108 L6 108Z" fill="url(#ga1)"/><path d="M6 96 L40 84 L74 88 L108 66 L142 58 L176 40 L214 26" fill="none" stroke="#60a5fa" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><g fill="#f2c811"><circle cx="176" cy="40" r="3"/><circle cx="214" cy="26" r="3.4"/></g></svg>
+<svg viewBox="0 0 120 120" aria-hidden="true"><text x="6" y="12" font-size="9" font-family="Inter,Arial" font-weight="700" fill="#e2e8f0">Por categoria</text><g transform="translate(60 66)" fill="none" stroke-width="16"><circle r="34" stroke="#1e293b"/><circle r="34" stroke="#3b82f6" stroke-dasharray="96 214" transform="rotate(-90)"/><circle r="34" stroke="#f2c811" stroke-dasharray="58 214" stroke-dashoffset="-96" transform="rotate(-90)"/><circle r="34" stroke="#38bdf8" stroke-dasharray="38 214" stroke-dashoffset="-154" transform="rotate(-90)"/></g><text x="60" y="70" text-anchor="middle" font-size="13" font-family="Sora,Arial" font-weight="800" fill="#fff">45%</text></svg></div>
+<div class="jbar2"><span style="width:92%"></span><span style="width:74%"></span><span style="width:58%"></span><span style="width:41%"></span></div></div></div>
+      <div class="flut f1"><span class="ic">X</span><span><b>Excel</b><small>Fórmulas · Power Query · VBA</small></span></div>
+      <div class="flut f2"><span class="ic">BI</span><span><b>Power BI</b><small>DAX · KPIs · Dashboards</small></span></div>
+      <div class="flut f3"><span class="ic">🎓</span><span><b>Certificado</b><small>no fim do curso</small></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="faixa" aria-hidden="true"><div class="trilho">
+  <span>Fórmulas avançadas</span><span>Tabelas dinâmicas</span><span>Power Query</span><span>Power Pivot</span><span>Modelação de dados</span><span>DAX e KPIs</span><span>Dashboards profissionais</span><span>Macros e VBA</span>
+  <span>Fórmulas avançadas</span><span>Tabelas dinâmicas</span><span>Power Query</span><span>Power Pivot</span><span>Modelação de dados</span><span>DAX e KPIs</span><span>Dashboards profissionais</span><span>Macros e VBA</span>
+</div></div>
+
+<!-- ================= CURSOS ================= -->
+<section class="sec" id="cursos">
+  <div class="wrap">
+    <div class="cab rv"><span class="etq">Os nossos cursos</span><h2>Duas competências.<br><span class="ouro">Um salto na carreira.</span></h2><p>Cada curso tem 3 módulos que levam do primeiro clique aos projetos reais. Escolha o curso para ver o programa completo.</p></div>
+    <div class="seletor rv"><div class="trilha" id="trilha"><span class="pilula" id="pilula"></span>
+      <button class="ativo" data-curso="excel"><i>X</i>Excel</button><button data-curso="bi"><i>BI</i>Power BI</button>
+    </div></div>
+
+    <!-- EXCEL -->
+    <div class="curso excel ativo" id="c-excel">
+      <div class="c-visual vid luz">
+        <div class="foto" aria-hidden="true"><div class="jan jx"><div class="jbar"><i></i><i></i><i></i><b>Vendas_2026.xlsx — Excel</b></div>
+<div class="jrib"><span class="on">Base</span><span>Inserir</span><span>Fórmulas</span><span>Dados</span><span>Rever</span></div>
+<div class="jfx"><em>fx</em>=SOMA.SE.S(Vendas[Valor];Vendas[Região];"Luanda")</div>
+<div class="jcorpo"><table class="jtab"><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+<tr><td>1</td><td class="h">Região</td><td class="h">Jan</td><td class="h">Fev</td><td class="h">Total</td></tr>
+<tr><td>2</td><td>Luanda</td><td>4 250</td><td>4 980</td><td class="s">9 230</td></tr>
+<tr><td>3</td><td>Benguela</td><td>2 110</td><td>2 640</td><td class="s">4 750</td></tr>
+<tr><td>4</td><td>Huambo</td><td>1 870</td><td>2 020</td><td class="s">3 890</td></tr>
+<tr><td>5</td><td>Lubango</td><td>1 340</td><td>1 610</td><td class="s">2 950</td></tr>
+<tr><td>6</td><td class="h">Total</td><td class="h">9 570</td><td class="h">11 250</td><td class="sel">20 820</td></tr></table>
+<svg class="jgraf" viewBox="0 0 160 110" aria-hidden="true"><g fill="#21a366"><rect x="10" y="62" width="14" height="38" rx="2"/><rect x="32" y="48" width="14" height="52" rx="2"/><rect x="54" y="55" width="14" height="45" rx="2"/><rect x="76" y="34" width="14" height="66" rx="2"/><rect x="98" y="40" width="14" height="60" rx="2"/></g><rect x="120" y="16" width="14" height="84" rx="2" fill="#d9b25f"/><path d="M4 100h152" stroke="#cbd5e1" stroke-width="1"/><text x="10" y="11" font-size="9" font-family="Inter,Arial" font-weight="700" fill="#0f5132">Vendas por mês</text></svg></div></div></div>
+        <span class="nivel">Do básico ao avançado</span>
+        <h3>Excel<span>.</span></h3>
+        <p>Domine o Excel para o trabalho, a análise de dados, os relatórios e a automatização de tarefas.</p>
+        <div class="dados"><div><small>Duração</small><b>8 semanas</b></div><div><small>Carga</small><b>48 horas</b></div><div><small>Investimento</small><b>80.000 Kz</b></div></div>
+      </div>
+      <div class="c-mod vid luz">
+        <h4>Programa em 3 módulos</h4>
+        <div class="mod aberto"><button aria-expanded="true"><span class="n">1</span><span class="t"><b>Excel Básico</b><small>Fundamentos e uso eficiente</small></span><span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="corpo"><div><ul><li>Interface e funcionalidades</li><li>Fórmulas e funções</li><li>Formatação de dados</li><li>Tabelas e filtros</li><li>Gráficos básicos</li><li>Validação de dados</li><li>Dicas de produtividade</li></ul></div></div></div>
+        <div class="mod"><button aria-expanded="false"><span class="n">2</span><span class="t"><b>Excel Intermédio</b><small>Análise e tratamento de dados</small></span><span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="corpo"><div><ul><li>Funções avançadas</li><li>Tabelas dinâmicas</li><li>Segmentação (slicers)</li><li>Formatação condicional</li><li>Limpeza de dados</li><li>Consolidação de dados</li><li>Dashboards simples</li><li>Automatização nativa</li></ul></div></div></div>
+        <div class="mod"><button aria-expanded="false"><span class="n">3</span><span class="t"><b>Excel Avançado</b><small>Modelação e automatização</small></span><span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="corpo"><div><ul><li>Power Query</li><li>Power Pivot e modelação</li><li>ÍNDICE, CORRESP, PROCX</li><li>Dashboards profissionais</li><li>Macros (VBA)</li><li>Relatórios interativos</li><li>Projetos reais</li><li>Casos profissionais</li></ul></div></div></div>
+        <div class="acoes"><a class="btn btn-ouro" href="#inscricao" data-escolhe="Excel">Inscrever-me em Excel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-vidro" href="img/cartaz_excel.jpg" target="_blank" rel="noopener">Ver cartaz</a></div>
+      </div>
+    </div>
+
+    <!-- POWER BI -->
+    <div class="curso bi" id="c-bi">
+      <div class="c-visual vid luz">
+        <div class="foto" aria-hidden="true"><div class="jan jb"><div class="jbar"><i></i><i></i><i></i><b>Painel de Vendas — Power BI</b></div>
+<div class="jkpi"><div><small>Receita</small><b>20,8 M</b><em>▲ 18,2%</em></div><div><small>Clientes</small><b>4 320</b><em>▲ 8,3%</em></div><div><small>Meta</small><b>94%</b><em>▲ 6,1%</em></div></div>
+<div class="jgr"><svg viewBox="0 0 220 120" aria-hidden="true"><defs><linearGradient id="ga2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b82f6" stop-opacity=".45"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></linearGradient></defs><text x="6" y="12" font-size="9" font-family="Inter,Arial" font-weight="700" fill="#e2e8f0">Evolução da receita</text><g stroke="#ffffff14"><path d="M6 40h208M6 70h208M6 100h208"/></g><path d="M6 96 L40 84 L74 88 L108 66 L142 58 L176 40 L214 26 L214 108 L6 108Z" fill="url(#ga2)"/><path d="M6 96 L40 84 L74 88 L108 66 L142 58 L176 40 L214 26" fill="none" stroke="#60a5fa" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><g fill="#f2c811"><circle cx="176" cy="40" r="3"/><circle cx="214" cy="26" r="3.4"/></g></svg>
+<svg viewBox="0 0 120 120" aria-hidden="true"><text x="6" y="12" font-size="9" font-family="Inter,Arial" font-weight="700" fill="#e2e8f0">Por categoria</text><g transform="translate(60 66)" fill="none" stroke-width="16"><circle r="34" stroke="#1e293b"/><circle r="34" stroke="#3b82f6" stroke-dasharray="96 214" transform="rotate(-90)"/><circle r="34" stroke="#f2c811" stroke-dasharray="58 214" stroke-dashoffset="-96" transform="rotate(-90)"/><circle r="34" stroke="#38bdf8" stroke-dasharray="38 214" stroke-dashoffset="-154" transform="rotate(-90)"/></g><text x="60" y="70" text-anchor="middle" font-size="13" font-family="Sora,Arial" font-weight="800" fill="#fff">45%</text></svg></div>
+<div class="jbar2"><span style="width:92%"></span><span style="width:74%"></span><span style="width:58%"></span><span style="width:41%"></span></div></div></div>
+        <span class="nivel">Do básico ao avançado</span>
+        <h3>Power BI<span>.</span></h3>
+        <p>Transforme dados em dashboards interativos, indicadores e relatórios profissionais que apoiam decisões.</p>
+        <div class="dados"><div><small>Duração</small><b>8 semanas</b></div><div><small>Carga</small><b>48 horas</b></div><div><small>Investimento</small><b>80.000 Kz</b></div></div>
+      </div>
+      <div class="c-mod vid luz">
+        <h4>Programa em 3 módulos</h4>
+        <div class="mod aberto"><button aria-expanded="true"><span class="n">1</span><span class="t"><b>Power BI Básico</b><small>Fundamentos e primeiros relatórios</small></span><span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="corpo"><div><ul><li>Power BI Desktop</li><li>Importar Excel e CSV</li><li>Primeiros relatórios</li><li>Tabelas e gráficos</li><li>Filtros</li><li>Noções de Power Query</li></ul></div></div></div>
+        <div class="mod"><button aria-expanded="false"><span class="n">2</span><span class="t"><b>Power BI Intermédio</b><small>Tratamento e modelação de dados</small></span><span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="corpo"><div><ul><li>Limpeza de dados</li><li>Relações entre tabelas</li><li>Modelação de dados</li><li>Medidas e colunas DAX</li><li>Segmentações e filtros</li><li>Dashboards interativos</li></ul></div></div></div>
+        <div class="mod"><button aria-expanded="false"><span class="n">3</span><span class="t"><b>Power BI Avançado</b><small>Modelação, DAX e projetos reais</small></span><span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="corpo"><div><ul><li>DAX avançado e KPIs</li><li>Modelação otimizada</li><li>Power Query e ETL</li><li>Design de dashboards</li><li>Publicar e partilhar</li><li>Projeto final real</li></ul></div></div></div>
+        <div class="acoes"><a class="btn btn-ouro" href="#inscricao" data-escolhe="Power BI">Inscrever-me em Power BI <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-vidro" href="img/cartaz_powerbi.jpg" target="_blank" rel="noopener">Ver cartaz</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INVESTIMENTO ================= -->
+<section class="sec" id="investimento" style="padding-top:40px">
+  <div class="wrap">
+    <div class="cab rv"><span class="etq">Investimento</span><h2>Um valor, <span class="ouro">tudo incluído</span>.</h2></div>
+    <div class="precos">
+      <div class="cartao-preco rv"><div class="in">
+        <span class="tag">CURSO COMPLETO · 3 MÓDULOS</span>
+        <div class="valor"><b>80.000</b><span>Kz</span></div>
+        <p class="por">por curso — Excel ou Power BI, do básico ao avançado.</p>
+        <ul class="inclui"><li>24 aulas ao vivo de 2 horas</li><li>Turmas de até 7 alunos</li><li>Material de apoio</li><li>Caderno de cada aula em PDF</li><li>Exercícios e projetos reais</li><li>Certificado de participação</li></ul>
+        <a class="btn btn-ouro" href="#inscricao" style="width:100%">Quero inscrever-me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div></div>
+      <div class="semana vid luz rv d1">
+        <span class="etq">Calendário</span>
+        <h3>3 aulas por semana, durante 2 meses</h3>
+        <p>Tempo para explicar a matéria, praticar na aula e fazer exercícios em casa.</p>
+        <div class="dias">
+          <div class="dia aula"><b>Seg</b><span>2 h</span></div><div class="dia"><b>Ter</b><span>—</span></div><div class="dia aula"><b>Qua</b><span>2 h</span></div><div class="dia"><b>Qui</b><span>—</span></div><div class="dia aula"><b>Sex</b><span>2 h</span></div><div class="dia"><b>Sáb</b><span>—</span></div><div class="dia"><b>Dom</b><span>—</span></div>
+        </div>
+        <div class="barras"><div><b>6 h</b><small>por semana</small></div><div><b>24</b><small>aulas</small></div><div><b>48 h</b><small>por curso</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PORQUÊ ================= -->
+<section class="sec" id="porque">
+  <div class="wrap">
+    <div class="cab rv"><span class="etq">Porquê a OZAIN</span><h2>Aprender a sério, <span class="ouro">com quem acompanha</span>.</h2><p>Uma sala de aulas própria, formadores próximos e um método prático do início ao fim.</p></div>
+    <div class="grelha">
+      <div class="vant destaque vid luz rv">
+        <div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <h3>A nossa sala de aulas ao vivo</h3><p>Entra com um link e uma senha, a partir do telemóvel ou do computador, sem instalar nada. Fala com o formador, partilha o ecrã, levanta a mão e participa nas sondagens.</p></div>
+        <img src="img/aula.jpg" alt="Sala de aulas ao vivo da OZAIN" loading="lazy" width="1400" height="875">
+      </div>
+      <div class="vant vid luz rv d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Turmas de até 7 alunos</h3><p>O formador acompanha cada pessoa e responde a todas as dúvidas na hora.</p></div>
+      <div class="vant vid luz rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Prática com dados reais</h3><p>Exercícios de gestão, vendas e finanças para aplicar logo no trabalho.</p></div>
+      <div class="vant vid luz rv d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></div><h3>Caderno de cada aula</h3><p>No fim de cada aula recebe o resumo da matéria em PDF e o material de apoio.</p></div>
+      <div class="vant vid luz rv d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89L17 22l-5-3-5 3 1.52-9.11"/></svg></div><h3>Certificado</h3><p>Ao concluir o curso recebe o certificado de participação da OZAIN Business School.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMO FUNCIONA ================= -->
+<section class="sec" style="padding-top:40px">
+  <div class="wrap">
+    <div class="cab rv"><span class="etq">Como funciona</span><h2>Da inscrição à primeira aula</h2></div>
+    <div class="linha-tempo">
+      <div class="passo rv"><div class="bola"><span class="ouro">01</span></div><h3>Inscreva-se</h3><p>Escolha o curso no formulário ou fale connosco pelo WhatsApp.</p></div>
+      <div class="passo rv d1"><div class="bola"><span class="ouro">02</span></div><h3>Receba o acesso</h3><p>Antes da aula recebe o link, o seu nome de entrada e a senha.</p></div>
+      <div class="passo rv d2"><div class="bola"><span class="ouro">03</span></div><h3>Aprenda ao vivo</h3><p>Segunda, quarta e sexta, 2 horas com o formador e a turma.</p></div>
+      <div class="passo rv d3"><div class="bola"><span class="ouro">04</span></div><h3>Receba o certificado</h3><p>Conclua os 3 módulos e aplique tudo no seu trabalho.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARCEIROS ================= -->
+<section class="sec" id="parceiros" style="padding-top:40px">
+  <div class="wrap">
+    <div class="parceiros vid rv">
+      <div>
+        <span class="etq">Programa de parceiros</span>
+        <h2>A sua escola online, <span class="ouro">pronta a usar</span>.</h2>
+        <p>Academias, empresas e formadores dão as suas aulas na sala de vídeo da OZAIN, com segurança, relatórios e a qualidade da nossa marca.</p>
+        <ul class="lista-p"><li><i>◆</i>Sala de vídeo própria</li><li><i>◆</i>Link e senha por aluno</li><li><i>◆</i>1 acesso = 1 pessoa</li><li><i>◆</i>Alertas de invasão</li><li><i>◆</i>Relatórios Excel e PDF</li><li><i>◆</i>Caderno para cada aluno</li></ul>
+        <div class="planos"><span>1 mês</span><span>3 meses</span><span>6 meses</span><span>12 meses</span></div>
+        <a class="btn btn-ouro" href="#inscricao" data-outro="Parceria (formadores e academias)">Quero ser parceiro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="dispositivos">
+        <img class="pc" src="img/sala.jpg" alt="Sala de aulas OZAIN no computador" loading="lazy" width="1600" height="1000">
+        <div class="tel"><img src="img/telemovel.jpg" alt="Entrada na aula no telemóvel" loading="lazy" width="600" height="864"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CARTAZES ================= -->
+<section class="sec" style="padding-top:40px">
+  <div class="wrap">
+    <div class="cab rv"><span class="etq">Cartazes</span><h2>Partilhe com quem quer crescer</h2><p>Toque num cartaz para o abrir em tamanho grande e enviar pelo WhatsApp.</p></div>
+    <div class="cartazes">
+      <a class="rv" href="img/cartaz_excel.jpg" target="_blank" rel="noopener"><img src="img/cartaz_excel.jpg" alt="Cartaz do curso de Excel, 80.000 Kz" loading="lazy" width="900" height="1350"></a>
+      <a class="rv d1" href="img/cartaz_powerbi.jpg" target="_blank" rel="noopener"><img src="img/cartaz_powerbi.jpg" alt="Cartaz do curso de Power BI, 80.000 Kz" loading="lazy" width="853" height="1280"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec" id="faq" style="padding-top:40px">
+  <div class="wrap">
+    <div class="cab rv"><span class="etq">Perguntas frequentes</span><h2>Tire as suas dúvidas</h2></div>
+    <div class="faq">
+      <details class="vid rv"><summary>Quanto custa e o que está incluído?</summary><p>Cada curso (Excel ou Power BI) custa 80.000 Kz e inclui os 3 módulos, do básico ao avançado: 24 aulas ao vivo de 2 horas (48 horas), material de apoio, caderno de cada aula em PDF e certificado de participação.</p></details>
+      <details class="vid rv"><summary>Em que dias são as aulas?</summary><p>Segunda, quarta e sexta, 2 horas por aula, durante 8 semanas. As datas de início das próximas turmas são enviadas na inscrição.</p></details>
+      <details class="vid rv"><summary>Preciso de saber Excel para me inscrever?</summary><p>Não. Os dois cursos começam no módulo básico e avançam até ao nível avançado.</p></details>
+      <details class="vid rv"><summary>Preciso de instalar algum programa para assistir?</summary><p>Não. As aulas decorrem no navegador do telemóvel ou do computador. Para praticar, precisa do Excel ou do Power BI Desktop no computador; o formador ajuda na instalação.</p></details>
+      <details class="vid rv"><summary>Se faltar a uma aula, perco a matéria?</summary><p>Recebe o material de apoio e o caderno da aula, e pode esclarecer as dúvidas com o formador na aula seguinte ou pelo WhatsApp.</p></details>
+      <details class="vid rv"><summary>Fazem formação para empresas?</summary><p>Sim. Organizamos turmas fechadas para equipas, com horários à medida e relatório de presenças. Peça uma proposta pelo formulário.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSCRIÇÃO ================= -->
+<section class="sec" id="inscricao" style="padding-top:40px;padding-bottom:0">
+  <div class="wrap">
+    <div class="final vid rv">
+      <div>
+        <span class="etq">Inscrição</span>
+        <h2>Garanta já a sua <span class="ouro">vaga</span>.</h2>
+        <p>As turmas têm no máximo 7 alunos. Envie a inscrição: a mensagem abre no WhatsApp, já escrita, e respondemos com a data de início.</p>
+        <div class="contactos">
+          <a href="https://wa.me/244950644152" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm5.9 15.3c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 2.9 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></span><span><small>WhatsApp</small><b>+244 950 644 152</b></span></a>
+          <a href="https://lokenio100-commits.github.io/Controlle-SC2026/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg></span><span><small>Já é aluno?</small><b>Entrar na sala de aula</b></span></a>
+        </div>
+      </div>
+      <form id="form" novalidate>
+        <h3>Formulário de inscrição</h3><p class="sub">Demora menos de um minuto.</p>
+        <div class="opcoes" role="radiogroup" aria-label="Curso">
+          <label><input type="radio" name="curso" value="Excel" checked><span>Excel<small>80.000 Kz</small></span></label>
+          <label><input type="radio" name="curso" value="Power BI"><span>Power BI<small>80.000 Kz</small></span></label>
+          <label><input type="radio" name="curso" value="Excel + Power BI"><span>Os dois<small>Excel + Power BI</small></span></label>
+        </div>
+        <div class="campo"><label for="fOutro">Ou outra opção</label><select id="fOutro"><option value="">—</option><option>Formação para empresa</option><option>Parceria (formadores e academias)</option></select></div>
+        <div class="campo"><label for="fNome">Nome completo</label><input id="fNome" autocomplete="name" placeholder="ex.: Ana Domingos"></div>
+        <div class="par">
+          <div class="campo"><label for="fTel">Telefone / WhatsApp</label><input id="fTel" type="tel" autocomplete="tel" placeholder="+244 9xx xxx xxx"></div>
+          <div class="campo"><label for="fHora">Horário preferido</label><select id="fHora"><option>Pós-laboral</option><option>Manhã</option><option>Tarde</option></select></div>
+        </div>
+        <div class="campo"><label for="fMsg">Mensagem (opcional)</label><textarea id="fMsg" rows="3" placeholder="O seu objetivo ou o seu nível atual"></textarea></div>
+        <button class="btn btn-ouro" type="submit">Enviar inscrição pelo WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="nota">🔒 Os seus dados só seguem para a OZAIN, pelo seu WhatsApp.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><a class="marca" href="#inicio"><span class="selo"><img src="img/logo.png" alt=""></span><span><b>OZAIN</b><small>BUSINESS SCHOOL</small></span></a><p>Cursos de Excel e Power BI, do básico ao avançado, ao vivo e em turmas pequenas. Conhecimento que Transforma.</p></div>
+    <div class="col"><h4>Cursos</h4><a href="#cursos">Excel</a><a href="#cursos">Power BI</a><a href="#investimento">Investimento</a></div>
+    <div class="col"><h4>Escola</h4><a href="#porque">Porquê a OZAIN</a><a href="#parceiros">Parceiros</a><a href="#faq">Perguntas</a></div>
+    <div class="col"><h4>Contacto</h4><a href="https://wa.me/244950644152" target="_blank" rel="noopener">+244 950 644 152</a><a href="https://lokenio100-commits.github.io/Controlle-SC2026/" target="_blank" rel="noopener">Plataforma de aulas</a><a href="#inscricao">Inscrição</a></div>
+    <div class="direitos"><span>© <span id="ano">2026</span> OZAIN Business School. Todos os direitos reservados.</span><span>Conhecimento que Transforma</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/244950644152?text=Ol%C3%A1%20OZAIN!%20Quero%20saber%20mais%20sobre%20os%20cursos." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.3 1.1 1.1-4.1-.3-.4c-1-1.6-1.6-3.5-1.6-5.4C5.2 9.8 10 5.1 16 5.1s10.8 4.7 10.8 10.5S22 26.1 16 26.1zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 2.9 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg><span>Fale connosco</span></a>
+
+<script>
+const $=id=>document.getElementById(id),$$=s=>document.querySelectorAll(s),WA='244950644152';
+const reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
+$('ano').textContent=new Date().getFullYear();
+// topo sólido e barra de progresso
+const topo=$('topo'),prog=$('progresso');
+function aoDeslizar(){topo.classList.toggle('solido',scrollY>20||$('links').classList.contains('aberto'));const h=document.documentElement.scrollHeight-innerHeight;prog.style.width=(h>0?scrollY/h*100:0)+'%'}
+addEventListener('scroll',aoDeslizar,{passive:true});aoDeslizar();
+// menu no telemóvel
+$('hamb').onclick=()=>{const a=$('links').classList.toggle('aberto');$('hamb').classList.toggle('x',a);$('hamb').setAttribute('aria-expanded',a);aoDeslizar()};
+$('links').addEventListener('click',e=>{if(e.target.closest('a')){$('links').classList.remove('aberto');$('hamb').classList.remove('x');aoDeslizar()}});
+// seletor Excel / Power BI
+function moverPilula(){const b=document.querySelector('.seletor button.ativo');$('pilula').style.width=b.offsetWidth+'px';$('pilula').style.transform='translateX('+(b.offsetLeft-6)+'px)'}
+$$('.seletor button').forEach(b=>b.addEventListener('click',()=>{
+  $$('.seletor button').forEach(x=>x.classList.toggle('ativo',x===b));
+  $$('.curso').forEach(c=>c.classList.toggle('ativo',c.id==='c-'+b.dataset.curso));moverPilula();
+}));
+addEventListener('resize',moverPilula);addEventListener('load',moverPilula);moverPilula();
+// módulos em acordeão
+$$('.mod button').forEach(b=>b.addEventListener('click',()=>{
+  const m=b.parentElement,todos=m.parentElement.querySelectorAll('.mod'),abrir=!m.classList.contains('aberto');
+  todos.forEach(x=>{x.classList.remove('aberto');x.querySelector('button').setAttribute('aria-expanded',false)});
+  if(abrir){m.classList.add('aberto');b.setAttribute('aria-expanded',true)}
+}));
+// luz que segue o rato
+$$('.luz').forEach(el=>el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px')}));
+// inclinação 3D do palco
+const palco=$('palco');
+if(palco&&!reduz&&matchMedia('(pointer:fine)').matches){
+  palco.addEventListener('pointermove',e=>{const r=palco.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    palco.querySelectorAll('.tela').forEach(t=>{const p=+t.dataset.prof;t.style.transform='perspective(1600px) rotateY('+(10*p+x*8)+'deg) rotateX('+(-y*6)+'deg) rotate('+(-2*p)+'deg)'})});
+  palco.addEventListener('pointerleave',()=>palco.querySelectorAll('.tela').forEach(t=>t.style.transform=''));
+}
+// contadores
+function contar(el){const fim=+el.dataset.conta,t0=performance.now();(function passo(t){const p=Math.min(1,(t-t0)/1400);el.textContent=Math.round(fim*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(passo)})(t0)}
+// revelar ao deslizar
+const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(x=>{if(!x.isIntersecting)return;x.target.classList.add('ok');x.target.querySelectorAll('[data-conta]').forEach(contar);io.unobserve(x.target)}),{threshold:.12,rootMargin:'0px 0px -40px 0px'}):null;
+$$('.rv').forEach(el=>io?io.observe(el):el.classList.add('ok'));
+if(!io)$$('[data-conta]').forEach(el=>el.textContent=el.dataset.conta);
+// botões que escolhem o curso no formulário
+$$('[data-escolhe]').forEach(b=>b.addEventListener('click',()=>{const r=document.querySelector('input[name=curso][value="'+b.dataset.escolhe+'"]');if(r)r.checked=true;$('fOutro').value=''}));
+$$('[data-outro]').forEach(b=>b.addEventListener('click',()=>{$('fOutro').value=b.dataset.outro}));
+// inscrição pelo WhatsApp
+$('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  for(const c of [$('fNome'),$('fTel')]){if(!c.value.trim()){c.focus();c.style.borderColor='#ef4444';return}c.style.borderColor=''}
+  const curso=$('fOutro').value||document.querySelector('input[name=curso]:checked').value;
+  const l=['Olá OZAIN Business School! Quero inscrever-me.','','Nome: '+$('fNome').value.trim(),'Telefone: '+$('fTel').value.trim(),'Curso: '+curso,'Horário preferido: '+$('fHora').value];
+  if($('fMsg').value.trim())l.push('','Mensagem: '+$('fMsg').value.trim());
+  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(l.join('\n')),'_blank','noopener');
+});
+</script>
+</body>
+</html>
